@@ -7,7 +7,7 @@ class DeroGoldd:
     Integrates with JSON-RPC interface of `DeroGoldd`
     """
 
-    def __init__(self, host='127.0.0.1', port=11898, ssl=False):
+    def __init__(self, host='127.0.0.1', port=6969, ssl=False):
         if ssl:
             self.url = f'https://{host}:{port}'
         else:
