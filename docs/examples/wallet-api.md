@@ -123,7 +123,7 @@ print(mnemonic_seed)
 response = wallet_api.transactions()
 
 print(response) 
- 
+
 #transaction_details
 hash = '396e2a782c9ce9993982c6f93e305b05306d0e5794f57157fbac78581443c55f'
 
@@ -269,3 +269,4 @@ response = wallet_api.status()
 
 print(response)
 ```
+

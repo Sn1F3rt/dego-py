@@ -23,7 +23,7 @@ The source code for this project is available at [https://github.com/sohamb03/de
 
 ## Donate
 
-If you would like to support the project, consider making a donation. :-)
+If you would like to support the project, consider making a donation. :-\)
 
 ```text
 dg51XbaPvkmVSyC1sK1NDfBdiPkMBMcdZY1WjFRdxreDLkDpPfW23aBZTgzDeap9voh2vQTXxCyNJbi3A1TgvXQE1CKrtXdJD

@@ -4,7 +4,7 @@
 
 Start _DeroGoldd_ with the `--enable-blockexplorer` cli argument:
 
-```
+```text
 ./DeroGoldd --enable-blockexplorer
 ```
 
@@ -14,7 +14,7 @@ After starting it make sure the block-chain is synchronized. This might take a w
 Successfully synchronized with the TurtleCoin Network
 ```
 
-You can now use the wrapper for TurtleCoind. 
+You can now use the wrapper for TurtleCoind.
 
 ## Usage
 
@@ -24,13 +24,13 @@ class DeroGoldd(host = '127.0.0.1', port = 6969, ssl = False)
 
 Integrates with the JSON-RPC interface of DeroGoldd.
 
-1. **`get_block_count()`**
+      1. **`get_block_count()`**
 
-         _Returns current chain height._
+            _Returns current chain height._
 
-         **NO INPUT**
+            **NO INPUT**
 
-         `Return type` _: dict_
+            `Return type` : _dict_
 
 ```python
 #Expected Output
@@ -44,9 +44,9 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-     2. **`get_block_hash(height)`**
+      2. **`get_block_hash(height)`**
 
-           _Returns block hash for a given height off by one._
+            _Returns block hash for a given height off by one._
 
 | Argument | Mandatory | Description | Data Type |
 | :---: | :---: | :---: | :---: |
@@ -63,16 +63,20 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      __3. **`get_block_template(reserve_size, wallet_address)`**
+```text
+  __3. **`get_block_template(reserve_size, wallet_address)`**
 
-            _Returns blocktemplate with an empty "hole" for nonce._
+        _Returns blocktemplate with an empty "hole" for nonce._
+```
 
 | Argument | Mandatory | Description | Data Type |
 | :---: | :---: | :---: | :---: |
 | reserve\_size | Yes | Size of the reserve to be specified. | int |
 | wallet\_address | Yes | Valid Dero Gold wallet address | str |
 
-            `Return type` : _dict_
+```text
+        `Return type` : _dict_
+```
 
 ```python
 #Expected Output
@@ -89,15 +93,17 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      4. **`submit_block(block_blob)`** 
+1. **`submit_block(block_blob)`**
 
-            Submits mined block.
+   Submits mined block.
 
 | Argument | Mandatory | Description | Data Type |
 | :---: | :---: | :---: | :---: |
 | block\_blob | Yes | Block blob of the mined block | str |
 
-            `Return type` : _dict_
+```text
+        `Return type` : _dict_
+```
 
 ```python
 #Expected Output
@@ -107,16 +113,16 @@ Integrates with the JSON-RPC interface of DeroGoldd.
     "result": {
         "status" : "OK"
     }
-} 
+}
 ```
 
-      5. **`get_last_block_header()`** 
+1. **`get_last_block_header()`**
 
-            _Returns the block header of the last block._
+   _Returns the block header of the last block._
 
-            **NO INPUT**
+   **NO INPUT**
 
-            `Return type` : _dict_
+   `Return type` : _dict_
 
 ```python
 #Expected Output
@@ -144,15 +150,17 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      6. **`get_block_header_by_hash(hash)`**
+1. **`get_block_header_by_hash(hash)`**
 
-            _Returns block header by given block hash._
+   _Returns block header by given block hash._
 
 | Argument | Mandatory | Description | Data Type |
 | :---: | :---: | :---: | :---: |
 | hash | Yes | Hash of the block | str |
 
-            `Return Type` : _dict_
+```text
+        `Return Type` : _dict_
+```
 
 ```python
 #Expected Output
@@ -180,15 +188,17 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      7. **`get_block_header_by_height(height)`**
+1. **`get_block_header_by_height(height)`**
 
-            _Returns block header by given block height._
+   _Returns block header by given block height._
 
 | Argument | Mandatory | Description | Data Type |
 | :---: | :---: | :---: | :---: |
 | height | Yes | Height of the block | int |
 
-            `Return Type` : _dict_
+```text
+        `Return Type` : _dict_
+```
 
 ```python
 #Expected Output
@@ -216,13 +226,13 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      8. **`get_currency_id()`**
+1. **`get_currency_id()`**
 
-            _Returns unique currency identifier._
+   _Returns unique currency identifier._
 
-            **NO INPUT**
+   **NO INPUT**
 
-            `Return Type` : _dict_
+   `Return Type` : _dict_
 
 ```python
 #Expected Output
@@ -235,15 +245,17 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      9. **`get_blocks(height)`**
+1. **`get_blocks(height)`**
 
-            _Returns information on the last 30 blocks before height \(inclusive\)_
+   _Returns information on the last 30 blocks before height \(inclusive\)_
 
 | Argument | Mandatory | Description | Data Type |
 | :---: | :---: | :---: | :---: |
 | height | Yes | Height of the last block to be included in the result | int |
 
-            `Return Type` : _dict_
+```text
+        `Return Type` : _dict_
+```
 
 ```python
 #Expected Output
@@ -266,15 +278,17 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      10. **`get_block(hash)`**
+1. **`get_block(hash)`**
 
-            _Returns information on a single block_
+   _Returns information on a single block_
 
 | Argument | Mandatory | Description | Data Type |
 | :---: | :---: | :---: | :---: |
 | hash | Yes | Hash of the block | str |
 
-            `Return Type` : _dict_
+```text
+        `Return Type` : _dict_
+```
 
 ```python
 #Expected Output
@@ -317,15 +331,17 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      11. **`get_transaction(hash)`**
+1. **`get_transaction(hash)`**
 
-            _Returns information on the single transaction._
+   _Returns information on the single transaction._
 
 | Argument | Mandatory | Description | Data Type |
 | :---: | :---: | :---: | :---: |
-| hash  | Yes  | Hash of the transaction | str |
+| hash | Yes | Hash of the transaction | str |
 
-            `Return Type` : _dict_
+```text
+        `Return Type` : _dict_
+```
 
 ```python
 #Expected Output
@@ -378,13 +394,13 @@ Integrates with the JSON-RPC interface of DeroGoldd.
 }
 ```
 
-      12. **`get_transaction_pool()`**
+1. **`get_transaction_pool()`**
 
-            _Returns the list of transaction hashes in the mempool._
+   _Returns the list of transaction hashes in the mempool._
 
-            **NO INPUT**
+   **NO INPUT**
 
-            `Return Type` : _dict_
+   `Return Type` : _dict_
 
 ```python
 #Expected Output
@@ -404,5 +420,4 @@ Integrates with the JSON-RPC interface of DeroGoldd.
     }
 }
 ```
-
 
