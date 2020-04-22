@@ -1,5 +1,5 @@
 ---
-description: Examples for usage of the wallet-api wrapper.
+description: Examples for usage of the Wallet-API wrapper.
 ---
 
 # Wallet-API
