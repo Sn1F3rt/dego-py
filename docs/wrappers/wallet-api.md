@@ -18,8 +18,6 @@ You can now use the wrapper for Wallet-API.
 class WalletAPI(key, host = '127.0.0.1', port = 1337, ssl = False)
 ```
 
-
-
 Integrates with the JSON-PRC interface of Wallet-API.
 
       1. **`open_wallet(filename, password, daemon_host = '127.0.0.1', daemon_port = 6969)`** 
