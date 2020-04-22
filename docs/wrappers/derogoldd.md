@@ -11,10 +11,10 @@ Start _DeroGoldd_ with the `--enable-blockexplorer` cli argument:
 After starting it make sure the block-chain is synchronized. This might take a while. The console log will show a message when it’s done:
 
 ```bash
-Successfully synchronized with the TurtleCoin Network
+Successfully synchronized with the Dero Gold Network
 ```
 
-You can now use the wrapper for TurtleCoind.
+You can now use the wrapper for DeroGoldd.
 
 ## Usage
 
