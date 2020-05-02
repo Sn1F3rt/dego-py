@@ -11,3 +11,4 @@ install:
 script:
   - python dego/DeroGoldd.py
   - python dego/WalletAPI.py
+  - python dego/Utils.py
