@@ -10,12 +10,14 @@ class WalletAPI:
         ./wallet-api --rpc-password my_password
     """
 
-    def __init__(self, key, host='127.0.0.1', port=1337, ssl=False):
+    def __init__(self, key, host='127.0.0.1', port=1337, ssl=False, timeout=5):
 
         if ssl:
             self.url = f'https://{host}:{port}'
         else:
             self.url = f'http://{host}:{port}'
+
+        self.timeout = timeout
 
         self.headers = {'X-API-KEY': f'{key}'}
 
@@ -29,7 +31,7 @@ class WalletAPI:
     def _get_request(self, method):
         get_url = self.url + '/' + method
 
-        response = requests.get(get_url, headers=self.headers)
+        response = requests.get(get_url, headers=self.headers, timeout=(self.timeout,))
 
         if response.status_code == 200:
             return response.json()
@@ -55,9 +57,9 @@ class WalletAPI:
         post_url = self.url + '/' + method
 
         if body:
-            response = requests.post(post_url, data=body, headers=self.headers)
+            response = requests.post(post_url, data=body, headers=self.headers, timeout=(self.timeout,))
         else:
-            response = requests.post(post_url, headers=self.headers)
+            response = requests.post(post_url, headers=self.headers, timeout=(self.timeout,))
 
         if response.status_code in [200, 201]:
             return response.json()
@@ -92,7 +94,7 @@ class WalletAPI:
     def _delete_request(self, method):
         delete_url = self.url + '/' + method
 
-        response = requests.get(delete_url, headers=self.headers)
+        response = requests.get(delete_url, headers=self.headers, timeout=(self.timeout,))
 
         if response.status_code == 200:
             return
@@ -122,7 +124,7 @@ class WalletAPI:
         put_url = self.url + '/' + method
 
         if body:
-            response = requests.put(put_url, data=body, headers=self.headers)
+            response = requests.put(put_url, data=body, headers=self.headers, timeout=(self.timeout,))
         else:
             response = requests.put(put_url, headers=self.headers)
 
